@@ -20,7 +20,7 @@ fn get_largest_group(lines: Lines<BufReader<File>>) -> i32 {
                     current = 0;
                 }
                 _ => {
-                    current += l.parse::<i32>().unwrap();
+                    current += l.parse::<i32>().unwrap_or(0);
                 }
             }
         });
